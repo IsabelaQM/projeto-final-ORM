@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:emails
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 12345
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
+springdoc:
+    paths-to-match:
+        - /**
+    swagger-ui:
+        use-root-path: true
