@@ -1,0 +1,44 @@
+###
+### Emails
+###
+
+
+POST http://localhost:8080/emails HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Ana Clara",
+    "cpf": "12345678900",
+    "telefone": "11987654321",
+    "email": "ana@mail.com",
+    "assunto": "Contato",
+    "texto": "Olá, gostaria de saber mais sobre o produto X"
+}
+
+### Adicionando outro e-mail
+POST http://localhost:8080/emails HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Isabela Queiroz",
+    "cpf": "11225678999",
+    "telefone": "34998888777",
+    "email": "isabela@gmail.com",
+    "assunto": "Dúvida",
+    "texto": "Olá! Poderia me explicar mais sobre o aplicativo de benefícios?"
+}
+
+### Listar todos os e-mails
+GET http://localhost:8080/emails HTTP/1.1
+
+
+### Buscar e-mail por ID
+GET http://localhost:8080/emails/1 HTTP/1.1
+
+### Buscar e-mails por CPF
+GET http://localhost:8080/emails/cpf/12345678900 HTTP/1.1
+
+### Buscar e-mails por nome
+GET http://localhost:8080/emails/nome/Ana%20Clara HTTP/1.1
+
+
